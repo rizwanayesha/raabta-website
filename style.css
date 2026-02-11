@@ -31,10 +31,15 @@ gap:10px;
 }
 
 .logo{
-height:60px;
-transition: transform 0.4s ease, filter 0.4s ease;
+height:70px;
+transition: transform 0.4s ease;
 cursor:pointer;
 }
+
+.logo:hover{
+transform:scale(1.08);
+}
+
 
 /* subtle hover animation */
 .logo:hover{
@@ -326,3 +331,107 @@ padding:0 15px;
 max-height:500px;
 padding:15px;
 }
+.problem-layout{
+display:flex;
+flex-direction:row;
+gap:50px;
+align-items:center;
+justify-content:center;
+padding:60px 10%;
+}
+
+
+
+.problem-text{
+max-width:500px;
+}
+
+.problem-chart{
+width:320px;
+background:white;
+padding:20px;
+border-radius:18px;
+box-shadow:0 20px 45px rgba(0,0,0,0.08);
+}
+/* ============================ */
+/* MOBILE RESPONSIVE SETTINGS */
+/* ============================ */
+
+@media (max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-images{
+width:100%;
+height:auto;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.phone{
+position:relative;
+left:auto;
+top:auto;
+transform:none;
+margin:10px;
+animation:none;
+}
+
+.problem-layout{
+flex-direction:column;
+text-align:center;
+}
+
+.founder-section{
+flex-direction:column;
+text-align:center;
+}
+
+.features{
+flex-direction:column;
+align-items:center;
+}
+
+.contact-form{
+width:90%;
+}
+
+.navbar{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+}
+.contact-form{
+width:420px;
+background:white;
+padding:40px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+display:flex;
+flex-direction:column;
+align-items:stretch;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:15px;
+box-sizing:border-box;
+}
+
+.contact-form textarea{
+height:120px;
+resize:vertical;
+}
+
