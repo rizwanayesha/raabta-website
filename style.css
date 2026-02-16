@@ -39,14 +39,17 @@ display:block;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:18px 60px;
 background:white;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
 z-index:100;
 width:100%;
+margin:0;
+border-radius:0;
 }
+
 
 .nav-left{
 display:flex;
@@ -223,6 +226,9 @@ transform:translateY(-8px);
 .cta-section{
 padding:80px 10%;
 text-align:center;
+}
+.section{
+padding:80px 10%;
 }
 
 .cta-section{
