@@ -1,4 +1,4 @@
-// Fade animation
+// ================= FADE ON SCROLL =================
 const faders = document.querySelectorAll(".fade");
 
 const appear = new IntersectionObserver(entries => {
@@ -9,10 +9,10 @@ const appear = new IntersectionObserver(entries => {
   });
 });
 
-faders.forEach(fader => appear.observe(fader));
+faders.forEach(el => appear.observe(el));
 
 
-// Phone click switching
+// ================= HOMEPAGE PHONE SWITCH =================
 const phones = document.querySelectorAll(".phone");
 
 phones.forEach(phone => {
@@ -23,28 +23,23 @@ phones.forEach(phone => {
 });
 
 
-// Chart
-const canvas = document.getElementById("communicationChart");
+// ================= FEATURES DROPDOWN =================
+document.querySelectorAll(".feature-header").forEach(header => {
 
-if (canvas && typeof Chart !== "undefined") {
+  header.addEventListener("click", () => {
 
-  const ctx = canvas.getContext("2d");
+    const item = header.parentElement;
 
-  new Chart(ctx, {
-    type: "doughnut",
-    data: {
-      labels: ["Communication Challenges", "General Population"],
-      datasets: [{
-        data: [20, 80],
-        backgroundColor: ["#7FA7D6", "#F0B88A"],
-        borderWidth: 0
-      }]
-    },
-    options: {
-      responsive: true,
-      animation: {
-        duration: 1500
+    // close other open ones
+    document.querySelectorAll(".feature-item").forEach(i => {
+      if (i !== item) {
+        i.classList.remove("active");
       }
-    }
+    });
+
+    // open clicked one
+    item.classList.toggle("active");
+
   });
-}
+
+});
