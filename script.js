@@ -43,3 +43,43 @@ document.querySelectorAll(".feature-header").forEach(header => {
   });
 
 });
+
+
+// ================= COMMUNICATION CHART =================
+document.addEventListener("DOMContentLoaded", function(){
+
+  const canvas = document.getElementById("communicationChart");
+
+  // run only if chart exists on this page
+  if(canvas){
+
+    const ctx = canvas.getContext("2d");
+
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: [
+          "People with Communication Challenges",
+          "General Population"
+        ],
+        datasets: [{
+          data: [20, 80],
+          backgroundColor: ["#316392", "#EBCF6B"],
+          borderWidth: 0,
+          hoverOffset: 20
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom"
+          }
+        }
+      }
+    });
+
+  }
+
+});
